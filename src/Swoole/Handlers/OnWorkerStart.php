@@ -97,7 +97,7 @@ class OnWorkerStart
             if (! config('octane.swoole.enable_access_logs', true)) {
                 return;
             }
-            
+
             Stream::request(
                 $request->getMethod(),
                 $request->fullUrl(),
