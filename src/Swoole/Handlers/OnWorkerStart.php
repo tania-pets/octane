@@ -94,7 +94,7 @@ class OnWorkerStart
     protected function streamRequestsToConsole($server)
     {
         $this->workerState->worker->onRequestHandled(function ($request, $response, $sandbox) {
-            if (! config('octane.swoole.enable_access_logs', true)) {
+            if (! config('octane.swoole.enable_access_logs', false)) {
                 return;
             }
 
